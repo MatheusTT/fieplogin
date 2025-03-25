@@ -5,15 +5,15 @@ Este projeto em Python realiza o login automático na rede Wi-Fi da sua faculdad
 ## Pré-requisitos
 
 - Python 3 instalado
-- Biblioteca `requests`
+- Biblioteca `urllib3`
 
 ## Instalação
 
-### Instalar o `requests`
+### Instalar o `urllib3`
 
 #### Usando o `pip`
 ```sh
-pip install requests
+pip install urllib3
 ```
 
 #### Usando uma virtual environment (venv)
