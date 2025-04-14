@@ -6,6 +6,7 @@ Este projeto em Python realiza o login automático na rede Wi-Fi da sua faculdad
 
 - Python 3 instalado
 - Biblioteca `urllib3`
+- Clone em seu diretório "Documents"
 
 ## Instalação
 
@@ -24,7 +25,7 @@ venv\Scripts\activate      # Windows
 pip install requests
 ```
 
-## Uso
+## Uso 
 Dentro do diretório do projeto, execute o comando:
 ```sh
 python main.py "usuário" "senha"
