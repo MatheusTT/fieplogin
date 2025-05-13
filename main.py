@@ -14,7 +14,7 @@ ssl_context.set_ciphers("DEFAULT:@SECLEVEL=1")
 http = urllib3.PoolManager(ssl_context=ssl_context)
 
 # URL inicial para capturar cookies
-initial_url = 'https://visitantes.fiepr.org.br/'
+initial_url = 'http://visitantes.fiepr.org.br/'
 
 # Fazer a primeira requisição para capturar cookies
 response = http.request("GET", initial_url)
@@ -27,8 +27,8 @@ cookies = response.headers.get("Set-Cookie", "")
 redirectUrl = ""
 
 # Se necessário, ajustar a URL para evitar erros
-if not redirectUrl.startswith("https://"):
-    redirectUrl = "https://" + redirectUrl
+if not redirectUrl.startswith("http://"):
+    redirectUrl = "http://" + redirectUrl
 if len(redirectUrl) > 255:
     redirectUrl = redirectUrl[:255]
 
@@ -55,7 +55,7 @@ headers = {
 # Fazer o login com os dados no formato correto
 response = http.request(
   "POST",
-  "https://visitantes.fiepr.org.br/login.html",
+  "http://visitantes.fiepr.org.br/login.html",
   headers=headers,
   fields=payload,
   encode_multipart=False
